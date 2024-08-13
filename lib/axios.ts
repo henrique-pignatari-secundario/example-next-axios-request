@@ -7,7 +7,6 @@ export const api = axios.create({
 
 api.interceptors.request.use((config) => {
   const token = window.localStorage.getItem(JWT_STORAGE_KEY);
-  console.log(token);
   if (token) {
     config.headers.Authorization = "Bearer " + token;
   }

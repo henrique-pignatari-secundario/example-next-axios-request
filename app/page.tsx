@@ -44,7 +44,6 @@ export default function Home() {
 
       setMessage(data);
     } catch (e: any) {
-      console.log(e.response.status === 403);
       if (e.response.status === 401 || e.response.status === 403) {
         setMessage("não autorizado");
       } else {
